@@ -28,7 +28,11 @@ export interface Alternative {
 export interface USVendorComparison {
   id: string;
   name: string;
-  trustScoreStatus: 'pending';
+  trustScoreStatus: TrustScoreStatus;
+  trustScore?: number;
+  description?: string;
+  descriptionDe?: string;
+  reservations?: Reservation[];
 }
 
 export interface Reservation {

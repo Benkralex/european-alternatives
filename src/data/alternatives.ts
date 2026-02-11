@@ -1,7 +1,7 @@
 import type { Alternative } from '../types';
 import { manualAlternatives } from './manualAlternatives';
 import { researchAlternatives } from './researchAlternatives';
-import { reservationsById } from './trustOverrides';
+import { reservationsById, trustScoresById } from './trustOverrides';
 import { calculateTrustScore } from '../utils/trustScore';
 import { buildUSVendorComparisons } from './usVendors';
 
@@ -17,21 +17,24 @@ function mergeCatalogue(): Alternative[] {
 
   const merged = Array.from(deduped.values()).map((alternative) => {
     const reservations = alternative.reservations ?? reservationsById[alternative.id] ?? [];
-    const trustScore = calculateTrustScore({
+    const computedTrustScore = calculateTrustScore({
       country: alternative.country,
       isOpenSource: alternative.isOpenSource,
       openSourceLevel: alternative.openSourceLevel,
       tags: alternative.tags,
       reservations,
     });
+    const trustScore = trustScoresById[alternative.id];
+    const trustScoreStatus = trustScore != null ? 'ready' as const : 'pending' as const;
 
     return {
       ...alternative,
       logo: alternative.logo ?? `/logos/${alternative.id}.svg`,
       reservations,
+      trustScore,
       usVendorComparisons: buildUSVendorComparisons(alternative.replacesUS),
-      trustScoreStatus: 'pending' as const,
-      trustScoreBreakdown: trustScore.breakdown,
+      trustScoreStatus,
+      trustScoreBreakdown: trustScoreStatus === 'pending' ? computedTrustScore.breakdown : undefined,
     };
   });
 

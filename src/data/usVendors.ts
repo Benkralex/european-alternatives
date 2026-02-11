@@ -1,4 +1,4 @@
-import type { USVendorComparison } from '../types';
+import type { Reservation, USVendorComparison } from '../types';
 
 interface USVendorRecord {
   id: string;
@@ -6,12 +6,23 @@ interface USVendorRecord {
   aliases: string[];
 }
 
+interface USVendorTrustProfile {
+  trustScore: number;
+  description: string;
+  descriptionDe: string;
+  reservations: Reservation[];
+}
+
 const US_VENDOR_RECORDS: USVendorRecord[] = [
+  {
+    id: 'gmail',
+    name: 'Gmail',
+    aliases: ['gmail'],
+  },
   {
     id: 'google',
     name: 'Google',
     aliases: [
-      'gmail',
       'google search',
       'google workspace',
       'google maps',
@@ -169,6 +180,49 @@ const US_VENDOR_RECORDS: USVendorRecord[] = [
   },
 ];
 
+const US_VENDOR_TRUST_PROFILES: Record<string, USVendorTrustProfile> = {
+  gmail: {
+    trustScore: 2.7,
+    description:
+      'US-operated email service with strong technical hardening, but trust is reduced by Alphabet\'s ad-driven incentives, major privacy enforcement actions, and antitrust rulings.',
+    descriptionDe:
+      'US-E-Mail-Dienst mit starker technischer Absicherung, dessen Vertrauen aber durch Alphabets werbegetriebene Anreize, schwere Privacy-Verfahren und Antitrust-Urteile reduziert wird.',
+    reservations: [
+      {
+        id: 'ad-tech-majority-control',
+        text: 'Alphabet remains majority-funded by advertising, creating structural incentives that can conflict with privacy-first expectations.',
+        textDe: 'Alphabet erzielt weiterhin den Grossteil seines Umsatzes aus Werbung, was strukturelle Anreize schafft, die mit Privacy-First-Erwartungen kollidieren koennen.',
+        severity: 'major',
+        sourceUrl: 'https://www.sec.gov/ixviewer/ix.html?doc=/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm',
+      },
+      {
+        id: 'major-privacy-settlement-2025',
+        text: 'Google agreed to a $1.375B Texas settlement over privacy allegations around location, incognito, and biometrics.',
+        textDe: 'Google stimmte in Texas einem Vergleich ueber 1,375 Mrd. USD zu, basierend auf Privacy-Vorwuerfen zu Standortdaten, Incognito und biometrischen Daten.',
+        severity: 'major',
+        date: '2025-05-09',
+        sourceUrl: 'https://apnews.com/article/8097e181cc7cb8522781db8a9a897eea',
+      },
+      {
+        id: 'adverse-antitrust-rulings-2024-2025',
+        text: 'US antitrust cases found Google violated competition law in search and open-web ad-tech markets.',
+        textDe: 'US-Antitrust-Verfahren stellten fest, dass Google im Such- und Open-Web-Ad-Tech-Markt gegen Wettbewerbsrecht verstossen hat.',
+        severity: 'major',
+        date: '2025-04-17',
+        sourceUrl: 'https://www.justice.gov/opa/pr/department-justice-prevails-landmark-antitrust-case-against-google',
+      },
+      {
+        id: 'gemini-bundled-pricing-2025',
+        text: 'Workspace business plans were repriced while Gemini AI features were bundled into base offerings, reducing opt-out flexibility on cost.',
+        textDe: 'Workspace-Business-Plaene wurden neu bepreist, waehrend Gemini-AI-Funktionen in Basispakete gebuendelt wurden, was die Kosten-Opt-out-Flexibilitaet reduziert.',
+        severity: 'moderate',
+        date: '2025-01-15',
+        sourceUrl: 'https://workspace.google.com/blog/product-announcements/empowering-businesses-with-AI',
+      },
+    ],
+  },
+};
+
 function normalizeVendorName(value: string): string {
   return value
     .toLowerCase()
@@ -196,10 +250,16 @@ for (const record of US_VENDOR_RECORDS) {
 }
 
 function toComparison(record: USVendorRecord): USVendorComparison {
+  const profile = US_VENDOR_TRUST_PROFILES[record.id];
+
   return {
     id: record.id,
     name: record.name,
-    trustScoreStatus: 'pending',
+    trustScoreStatus: profile ? 'ready' : 'pending',
+    trustScore: profile?.trustScore,
+    description: profile?.description,
+    descriptionDe: profile?.descriptionDe,
+    reservations: profile?.reservations,
   };
 }
 

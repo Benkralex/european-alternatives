@@ -56,7 +56,7 @@
   },
   "alternatives": {
     "tuta": {
-      "description": "Ende-zu-Ende-verschlüsselter E-Mail-Dienst aus Deutschland. Früher bekannt als Tutanota, bietet Tuta sichere E-Mail, Kalender und Kontakte mit Zero-Knowledge-Verschlüsselung und Post-Quanten-Kryptografie."
+      "description": "Ende-zu-Ende-verschlüsselter E-Mail-Dienst aus Deutschland. Früher bekannt als Tutanota, bietet Tuta sichere E-Mail, Kalender und Kontakte mit Zero-Knowledge-Verschlüsselung und Post-Quanten-Kryptografie, bietet kein IMAP und veröffentlicht Open Source nur für den Client-Code."
     },
     "mistral": {
       "description": "Französisches KI-Unternehmen, das führende Open-Weight-Sprachmodelle und Le Chat, einen schnellen, datenschutzorientierten Assistenten, entwickelt. Gegründet von ehemaligen Forschern von Google DeepMind und Meta, setzt sich Mistral für europäische Datensouveränität mit DSGVO-konformer Infrastruktur ein."

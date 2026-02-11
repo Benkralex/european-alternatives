@@ -56,7 +56,7 @@
   },
   "alternatives": {
     "tuta": {
-      "description": "End-to-end encrypted email service built in Germany. Formerly known as Tutanota, Tuta offers secure email, calendar, and contacts with zero-knowledge encryption and post-quantum cryptography."
+      "description": "End-to-end encrypted email service built in Germany. Formerly known as Tutanota, Tuta offers secure email, calendar, and contacts with zero-knowledge encryption and post-quantum cryptography, does not offer IMAP, and only publishes client code as open source."
     },
     "mistral": {
       "description": "French AI company building frontier open-weight large language models and Le Chat, a fast privacy-focused assistant. Founded by former Google DeepMind and Meta researchers, Mistral champions European data sovereignty with GDPR-compliant infrastructure."

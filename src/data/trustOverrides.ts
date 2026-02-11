@@ -1,5 +1,9 @@
 import type { Reservation } from '../types';
 
+export const trustScoresById: Record<string, number> = {
+  tuta: 7.5,
+};
+
 export const reservationsById: Record<string, Reservation[]> = {
   'black-forest-labs': [
     {
@@ -195,11 +199,26 @@ export const reservationsById: Record<string, Reservation[]> = {
   ],
   tuta: [
     {
-      id: 'backend-not-open-source',
-      text: 'Tuta clients are open source, but backend server components are not publicly auditable.',
-      textDe: 'Tuta-Clients sind quelloffen, Backend-Serverkomponenten jedoch nicht oeffentlich pruefbar.',
+      id: 'no-standard-mail-protocols',
+      text: 'Tuta does not offer IMAP and relies on its own clients instead of standard mailbox protocol access.',
+      textDe: 'Tuta bietet kein IMAP an und setzt statt standardisiertem Mailbox-Zugriff auf eigene Clients.',
       severity: 'moderate',
-      sourceUrl: 'https://github.com/tutao/tutanota',
+      sourceUrl: 'https://tuta.com/support#what-email-protocols-does-tuta-support',
+    },
+    {
+      id: 'targeted-legal-interception-risk',
+      text: 'Tuta confirms it can be legally required to enable targeted interception under German court orders.',
+      textDe: 'Tuta bestaetigt, dass bei deutschen Gerichtsanordnungen eine gezielte Ueberwachung rechtlich erzwungen werden kann.',
+      severity: 'moderate',
+      date: '2021-04-28',
+      sourceUrl: 'https://tuta.com/blog/transparency-report',
+    },
+    {
+      id: 'clients-open-source-backend-closed',
+      text: 'Tuta publishes its client code as open source, while server-side code is not included in that public scope.',
+      textDe: 'Tuta veroeffentlicht den Client-Code als Open Source, waehrend serverseitiger Code nicht Teil dieses oeffentlichen Umfangs ist.',
+      severity: 'moderate',
+      sourceUrl: 'https://tuta.com/open-source',
     },
   ],
 };

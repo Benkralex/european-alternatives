@@ -5,9 +5,9 @@ export const manualAlternatives: Alternative[] = [
     id: 'tuta',
     name: 'Tuta',
     description:
-      'German encrypted email service (formerly Tutanota) with zero-knowledge mail, calendar, and contacts plus post-quantum TutaCrypt (ECC + Kyber). Tuta open-sources its clients under GPLv3, while its server-side infrastructure remains proprietary.',
+      'German encrypted email service (formerly Tutanota) with zero-knowledge mail, calendar, and contacts plus post-quantum TutaCrypt (ECC + Kyber). Tuta open-sources its clients under GPLv3, while its server-side infrastructure remains proprietary and no IMAP mailbox access is offered.',
     localizedDescriptions: {
-      de: 'Ende-zu-Ende-verschluesselter E-Mail-Dienst aus Deutschland. Frueher bekannt als Tutanota, bietet Tuta sichere E-Mail, Kalender und Kontakte mit Zero-Knowledge-Verschluesselung und Post-Quanten-Kryptografie.',
+      de: 'Ende-zu-Ende-verschluesselter E-Mail-Dienst aus Deutschland. Frueher bekannt als Tutanota, bietet Tuta sichere E-Mail, Kalender und Kontakte mit Zero-Knowledge-Verschluesselung und Post-Quanten-Kryptografie. Clients sind quelloffen, der Backend-Stack bleibt proprietaer und IMAP wird nicht angeboten.',
     },
     website: 'https://tuta.com',
     logo: '/logos/tuta.svg',
