@@ -413,6 +413,27 @@ export const manualAlternatives: Alternative[] = [
     license: 'Apache-2.0',
   },
   {
+    id: 'haiilo',
+    name: 'Haiilo',
+    description:
+      'Enterprise communication platform for internal collaboration, employee engagement, and internal-facing workflows through a social intranet experience.',
+    localizedDescriptions: {
+      de: 'Unternehmensplattform für interne Zusammenarbeit, Mitarbeiterengagement und interne Arbeitsabläufe in einem Social-Intranet.',
+    },
+    website: 'https://www.haiilo.com',
+    logo: '/logos/haiilo.png',
+    country: 'de',
+    category: 'messaging',
+    replacesUS: ['Slack', 'Microsoft Teams'],
+    isOpenSource: false,
+    openSourceLevel: 'none',
+    pricing: 'paid',
+    tags: ['messaging', 'enterprise', 'employee-communications', 'intranet', 'gdpr'],
+    foundedYear: 2022,
+    headquartersCity: 'Hamburg',
+    license: 'Proprietary',
+  },
+  {
     id: 'hubitat-elevation',
     name: 'Hubitat Elevation',
     description:
@@ -495,5 +516,22 @@ export const manualAlternatives: Alternative[] = [
     foundedYear: 1991,
     headquartersCity: 'Global upstream community',
     license: 'GPL-2.0-only',
+  },
+  {
+    id: 'jitsi',
+    name: 'Jitsi',
+    description:
+      'Open-source video conferencing platform for browser-based meetings with chat, screen sharing, and collaborative notes. Jitsi offers a free public instance at meet.jit.si, no account required, and supports self-hosting for teams that want EU-friendly data and infrastructure control.',
+    website: 'https://jitsi.org',
+    country: 'fr',
+    category: 'meeting-software',
+    replacesUS: ['Google Meet', 'Microsoft Teams', 'Zoom'],
+    isOpenSource: true,
+    openSourceLevel: 'full',
+    sourceCodeUrl: 'https://github.com/jitsi/jitsi-meet',
+    pricing: 'free',
+    tags: ['meeting-software', 'videoconferencing', 'webrtc', 'open-source', 'self-hosting', 'e2ee'],
+    headquartersCity: 'Strasbourg',
+    license: 'Apache-2.0',
   },
 ];
