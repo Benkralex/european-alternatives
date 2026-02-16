@@ -641,6 +641,28 @@ export const manualAlternatives: Alternative[] = [
     ],
   },
   {
+    id: 'element',
+    name: 'Element (Matrix)',
+    description:
+      'Flagship client for the Matrix protocol, an open standard for decentralized, end-to-end encrypted communication. Element offers real-time messaging with rooms, spaces (similar to Discord servers), voice and video calls, and bridges to other platforms. The federated architecture lets users pick any homeserver or self-host while communicating across the entire Matrix network. Other popular clients include FluffyChat, Nheko, and Cinny.',
+    localizedDescriptions: {
+      de: 'Vorzeige-Client fuer das Matrix-Protokoll, einen offenen Standard fuer dezentrale, Ende-zu-Ende-verschluesselte Kommunikation. Element bietet Echtzeit-Messaging mit Raeumen, Spaces (aehnlich Discord-Servern), Sprach- und Videoanrufe sowie Bruecken zu anderen Plattformen. Die foederierte Architektur erlaubt Nutzenden, einen beliebigen Homeserver zu waehlen oder selbst zu hosten und dabei mit dem gesamten Matrix-Netzwerk zu kommunizieren. Weitere beliebte Clients sind FluffyChat, Nheko und Cinny.',
+    },
+    website: 'https://element.io',
+    logo: '/logos/element.svg',
+    country: 'gb',
+    category: 'messaging',
+    replacesUS: ['Discord', 'Slack', 'WhatsApp'],
+    isOpenSource: true,
+    openSourceLevel: 'full',
+    sourceCodeUrl: 'https://github.com/element-hq',
+    pricing: 'freemium',
+    tags: ['messaging', 'matrix', 'decentralized', 'e2ee', 'federation', 'voice', 'video', 'open-standard', 'self-hosting'],
+    foundedYear: 2017,
+    headquartersCity: 'London',
+    license: 'AGPL-3.0',
+  },
+  {
     id: 'jitsi',
     name: 'Jitsi',
     logo: '/logos/jitsi.svg',
