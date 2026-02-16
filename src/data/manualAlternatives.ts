@@ -610,4 +610,25 @@ export const manualAlternatives: Alternative[] = [
     headquartersCity: 'Strasbourg',
     license: 'Apache-2.0',
   },
+  {
+    id: 'immich',
+    name: 'Immich',
+    logo: '/logos/immich.svg',
+    description:
+      'Open-source self-hosted photo and video management platform. Immich allows users to store, organize, and share their media collections with privacy controls and AI-powered features like facial recognition and object detection.',
+    localizedDescriptions: {
+      de: 'Open-Source-Plattform zur Selbst-Hosting-Foto- und Videoverwaltung. Immich erlaubt Nutzern, ihre Medienbibliotheken zu speichern, zu organisieren und zu teilen mit Datenschutzkontrollen und KI-gestützten Funktionen wie Gesichtserkennung und Objekterkennung.',
+    },
+    website: 'https://immich.app',
+    country: 'us',
+    category: 'cloud-storage',
+    replacesUS: ['Google Photos', 'Apple Photos'],
+    isOpenSource: true,
+    openSourceLevel: 'full',
+    sourceCodeUrl: 'https://github.com/immich-app/immich',
+    pricing: 'free',
+    tags: ['media-management', 'photo-management', 'video-management', 'open-source', 'self-hosting', 'ai-powered'],
+    headquartersCity: 'Austin',
+    license: 'AGPL-3.0',
+  },
 ];
