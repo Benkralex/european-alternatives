@@ -580,4 +580,25 @@ export const manualAlternatives: Alternative[] = [
     headquartersCity: 'International',
     license: 'GPLv3',
   },
+  {
+    id: 'session',
+    name: 'Session',
+    logo: '/logos/session.svg',
+    description: 
+      'Session is an end-to-end encrypted messenger that protects your private data. A decentralized app designed, built, and operated by a global community of privacy experts.',
+    localizedDescriptions: {
+      de: 'Session ist ein Ende-zu-Ende verschlüsselter Messenger, der deine persönlichen Daten schützt. Hol dir die Kontrolle zurück – mit einer Messaging-App, die von einer globalen Community aus Privatsphäre-Experten entworfen, entwickelt und betrieben wird.'
+    },
+    website: 'https://getsession.org/',
+    country: 'eu',
+    category: 'messaging',
+    replacesUS: ['WhatsApp', 'iMessage', 'Facebook Messanger'],
+    isOpenSource: true,
+    openSourceLevel: 'full',
+    sourceCodeUrl: 'https://github.com/session-foundation',
+    pricing: 'free',
+    tags: ['messaging', 'e2ee', 'privacy', 'encryption', 'gdpr'],
+    headquartersCity: 'International',
+    license: 'GPLv3',
+  },
 ];
