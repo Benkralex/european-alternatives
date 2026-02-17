@@ -830,4 +830,18 @@ export const manualAlternatives: Alternative[] = [
       },
     ],
   },
+  {
+    id: 'grapheneos',
+    name: 'Graphene OS',
+    description: 'The private and secure mobile operating system with Android app compatibility. Developed as a non-profit open source project.',
+    website: 'https://grapheneos.org',
+    logo: '/logos/grapheneos.svg',
+    country: 'ca',
+    category: 'mobile-os',
+    replacesUS: ['Android', 'iOS'],
+    isOpenSource: true,
+    sourceCodeUrl: 'https://github.com/grapheneos',
+    pricing: 'free',
+    tags: ['operating-system', 'mobile', 'android', 'security', 'privacy']
+  },
 ];
