@@ -719,25 +719,27 @@ export const manualAlternatives: Alternative[] = [
     tags: ['meeting-software', 'videoconferencing', 'webrtc', 'open-source', 'self-hosting', 'e2ee'],
     headquartersCity: 'Strasbourg',
     license: 'Apache-2.0',
-  },{
+  },
+  {
     id: 'zeitkapsl',
     name: 'Zeitkapsl',
-    logo: '/logos/zeitkapsl_logo.svg',
+    logo: '/logos/zeitkapsl.svg',
     description:
-      'Cloud image backup / storage (alternative to iCloud Photos / Google Photos) that fully end-2-end encrypts your images. Allows encrypted sharing and automatic import from other clouds.',
+      'Cloud image backup / storage (alternative to iCloud Photos / Google Photos) that fully end-to-end encrypts your images. Allows encrypted sharing and automatic import from other clouds.',
     localizedDescriptions: {
-      de: 'Ende-zu-Ende verschhlüsselte Cloud-Lösung für deine Bilder.',
+      de: 'Ende-zu-Ende verschlüsselte Cloud-Lösung für deine Bilder.',
     },
     website: 'https://zeitkapsl.eu',
     country: 'at',
     category: 'cloud-storage',
-    replacesUS: ['Google Photos', 'Apple Photos', 'Amazon Photos', 'Apple iCloud', 'Google Drive'],
+    replacesUS: ['Google Photos', 'Apple Photos', 'Amazon Photos', 'iCloud', 'Google Drive'],
     isOpenSource: true,
-    license: 'GPL3v3',
+    openSourceLevel: 'full',
     sourceCodeUrl: 'https://codeberg.org/zeitkapsl/zeitkapsl',
     pricing: 'paid',
-    tags: ['images', 'photo', 'cloud', 'storage', 'privacy', 'E2EE'],
-    headquartersCity: 'Vienna'
+    tags: ['images', 'photo', 'cloud', 'storage', 'privacy', 'e2ee'],
+    headquartersCity: 'Vienna',
+    license: 'GPL-3.0',
   },
   {
     id: 'vaultwarden',
