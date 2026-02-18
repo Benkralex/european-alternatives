@@ -773,6 +773,28 @@ export const manualAlternatives: Alternative[] = [
     ],
   },
   {
+    id: 'briar',
+    name: 'Briar',
+    logo: '/logos/briar.svg',
+    description:
+      'Censorship-resistant peer-to-peer messaging that bypasses centralized servers. Connect via Bluetooth, Wi-Fi or Tor, with privacy built-in.',
+    localizedDescriptions: {
+      de: 'Zensurresistente Peer-to-Peer-Nachrichtenuebermittlung, die zentralisierte Server umgeht. Verbindung ueber Bluetooth, WLAN oder Tor, mit integrierter Datenschutzfunktion.',
+    },
+    website: 'https://briarproject.org/',
+    country: 'gb',
+    category: 'messaging',
+    replacesUS: ['WhatsApp', 'iMessage', 'Discord', 'Slack'],
+    isOpenSource: true,
+    openSourceLevel: 'full',
+    sourceCodeUrl: 'https://code.briarproject.org/briar',
+    pricing: 'free',
+    tags: ['messaging', 'e2ee', 'privacy', 'encryption', 'gdpr', 'decentralized', 'tor', 'peer-to-peer'],
+    foundedYear: 2018,
+    headquartersCity: 'Global upstream community',
+    license: 'GPL-3.0',
+  },
+  {
     id: 'contabo',
     name: 'Contabo',
     description:
@@ -1008,6 +1030,38 @@ export const manualAlternatives: Alternative[] = [
     tags: ['maps', 'navigation', 'privacy', 'offline-maps'],
     foundedYear: 2016,
     headquartersCity: 'Eindhoven',
+  },
+  {
+    id: 'session',
+    name: 'Session',
+    logo: '/logos/session.svg',
+    description:
+      'End-to-end encrypted messenger that protects your private data. A decentralized app designed, built, and operated by a global community of privacy experts, using onion routing to hide IP addresses.',
+    localizedDescriptions: {
+      de: 'Ende-zu-Ende verschluesselter Messenger zum Schutz persoenlicher Daten. Eine dezentrale App, die von einer globalen Community aus Privatsphaere-Experten entworfen, entwickelt und betrieben wird, mit Onion-Routing zum Schutz der IP-Adresse.',
+    },
+    website: 'https://getsession.org/',
+    country: 'ch',
+    category: 'messaging',
+    replacesUS: ['WhatsApp', 'iMessage', 'Discord', 'Slack'],
+    isOpenSource: true,
+    openSourceLevel: 'full',
+    sourceCodeUrl: 'https://github.com/session-foundation',
+    pricing: 'free',
+    tags: ['messaging', 'e2ee', 'privacy', 'encryption', 'gdpr', 'decentralized', 'onion-routing'],
+    foundedYear: 2020,
+    headquartersCity: 'Zug',
+    license: 'GPL-3.0',
+    reservations: [
+      {
+        id: 'australian-origin-2024-relocation',
+        text: 'Session was originally developed in Australia by the Oxen Privacy Tech Foundation. It relocated to Switzerland (Zug) in November 2024 after police pressure. The development team may still be largely Australian-based.',
+        textDe: 'Session wurde urspruenglich in Australien von der Oxen Privacy Tech Foundation entwickelt. Nach Druck durch Strafverfolgungsbehoerden wurde das Projekt im November 2024 in die Schweiz (Zug) verlegt. Das Entwicklungsteam koennte weiterhin groesstenteils in Australien ansaessig sein.',
+        severity: 'minor',
+        date: '2024-11-01',
+        sourceUrl: 'https://getsession.org/blog/introducing-the-session-technology-foundation',
+      },
+    ],
   },
 ];
  
