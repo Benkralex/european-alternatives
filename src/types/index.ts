@@ -56,8 +56,7 @@ export type CountryCode =
   | 'lt' | 'lu' | 'mt' | 'nl' | 'pl' | 'pt' | 'ro' | 'sk'
   | 'si' | 'es' | 'se'
   | 'ch' | 'no' | 'gb' | 'is'
-  | 'ca'
-  | 'eu' | 'us';
+  | 'eu' | 'us' | 'open-source' | 'ca';
 
 export type CategoryId =
   | 'cloud-storage'

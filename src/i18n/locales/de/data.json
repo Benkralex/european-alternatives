@@ -58,8 +58,9 @@
     "gb": "Vereinigtes Königreich",
     "is": "Island",
     "us": "Vereinigte Staaten",
-    "ca": "Kanada",
-    "eu": "Open Source (Nicht-EU-HQ)"
+    "eu": "Open Source (Nicht-EU-HQ)",
+    "open-source": "Open-Source (Kein HQ)",
+    "ca": "Kanada"
   },
   "alternatives": {
     "tuta": {
